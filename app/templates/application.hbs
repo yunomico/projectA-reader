@@ -1,0 +1,35 @@
+<div class="app-container">
+    <header class="row ">
+        <div class="app-wrap">
+        <div class="col-lg-2 row">
+            <a href="/" class="logo"><h2>MANGAFLIX</h2></a>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <nav class="menu">
+                <ul>
+                    <li class="no-hover"><input type="text" name="search" class="search" placeholder="Search.."></li>
+                    <li class="active"><a href="/top"><span>Top Releases</span></a></li>
+                    <li><a href="/list"><span>Manga List</span></a></li>
+                    <li class="login"><a href="/user/login"><span>Login</span></a></li>
+                    <!-- <li class="no-hover registered"><a href="/user/register"><img src="images/profile.png"><span>Maki</span></a></li> -->
+                </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </header>
+    {{outlet}}
+    <footer>
+        <div class="app-wrap">
+        <nav>
+            <ul>
+            <li><p>&copy; 2017 MangaFlix.com All Rights Reserved.</p></li>
+            <li><a href="/about"><span>About Us</span></a></li>
+            <li><a href="/tos"><span>Terms of Use</span></a></li>
+            </ul>
+        </nav>
+        </div>
+    </footer>
+    
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "mangaflix",
+  "homepage": "",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "owl.carousel": "^2.2.0",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "font-awesome": "^4.7.0"
+  }
+}

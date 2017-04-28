@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
+
+html , body, body > div {
+  background-color: #282827;
+  height: 100%;
+}
+
+* {
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.app-container {
+  min-height: 100%;
+  position: relative;
+}
+
+.app-container .app-wrap {
+  margin: 0px 70px;
+}
+
+/* Carousel base class */
+.carousel {
+  height: 550px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 550px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+footer{
+  background-color: #1a1a19;
+  padding: 10px 0px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.owl-carousel {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px; /*Half of the prev/next buttons height here in negatives to center them perfectly*/
+}
+.owl-prev {
+    left: -50px;
+}
+.owl-next {
+    right: -50px;
+}
+
+.owl-next, .owl-prev {
+    color: #CC0000;
+    font-size: 60px;
+}
+.owl-next.disabled, .owl-prev.disabled{
+  color: transparent;
+}
+.tile {
+    width: 200px !important;
+    height: 300px !important;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    border:3px solid transparent;
+}
+
+.owl-item:hover > .tile , .overview-active > .tile{
+    z-index:3;
+    height: 260px;
+    transform: scale(1.1);
+    border: 3px solid #FFF;
+}
+
+.title {
+    position: absolute;
+    z-index: 4;
+    color: rebeccapurple;
+    max-width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+    bottom: 2px;
+}
+
+
+.owl-carousel .owl-stage-outer{
+  padding: 40px 20px;
+}
+.overview-btn-group{
+  margin: 10px 0px;
+}
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+  /* HEADER */
+  header{
+    margin: 0px !important;
+    padding: 10px 20px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    -webkit-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+  }
+  header.withbackground{
+    background-color: rgba(26,26,25,1);
+  }
+  header .logo{
+    text-decoration: none;
+    color: #CC0000;
+  }
+  header .logo > h2{
+    font-weight: bold;;
+  }
+  header .search{
+    padding: 4px;
+  }
+
+  header .search{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  header .search:focus{
+    width: 100%;
+  }
+  header .menu{
+    text-align: right;
+  }
+  header .menu > ul{
+    list-style-type: none;
+    padding: 0px;
+    margin-right: 20px;
+  }
+  header .menu > ul > li:first-child{
+    width: 250px;
+  }
+  header .menu > ul > li.registered > a > img{
+    width: 25px;
+    margin: 0px 2px;
+  }
+  header .menu > ul > li{
+    display: inline-block;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  header .menu > ul > li > a{
+    text-decoration: none;
+    color:white;
+  }
+
+  header .menu > ul > li:not(.no-hover):hover , header .menu > ul > li.active{
+    border-bottom-color: #CC0000;
+  }
+  header .menu > ul > li:not(.no-hover):hover > a , header .menu > ul > li.active > a{
+   /* color:#CC0000;*/
+  }
+  /* END HEADER */
+
+
+  /* BANNER */
+  /*#banner{
+    width: 100%;
+    max-height: 700px;
+    background-image: url(../images/slider1.jpg);
+    background-position: top;
+    background-size: cover;
+    padding: 50px 0px;
+  }*/
+
+  #banner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, black , rgba(0,0,0,0.1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, black, rgba(0,0,0,0.1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, black, rgba(0,0,0,0.1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, black , rgba(0,0,0,0.1)); /* Standard syntax */
+  }
+  #banner > .banner-container{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    width: 35%;
+  }
+  #banner .banner-image > img{
+    width: 350px;
+  }
+
+  #banner .banner-tags{
+    padding: 10px 0px;
+  }
+  #banner .banner-tags > a{
+    text-decoration: none;
+    color:white;
+    border:1px solid white;
+    padding: 5px;
+    font-size: 9px;
+  }
+  #banner .banner-tags > a:hover{
+    color:#CC0000;
+    border:1px solid #CC0000;
+  }
+  #banner .banner-description > p{
+    color:white;
+  }
+  /* END BANNER */
+
+
+  /*TILES*/
+  .app-container .tiles-container{
+    margin-top: 50px;
+    margin-bottom : 50px;
+    color:white;
+  }
+  /*END TILES*/
+
+
+   .tiles-container  .arrow {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-top: 15px;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #FFF transparent transparent transparent;
+      position: absolute;
+    }
+    .drop-container .tile-close{
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        line-height: 80px;
+    }
+    .drop-container{
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      margin: -20px 0px 0px 0px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .drop-container img.drop-background{
+      width: 100%;
+      max-height: 500px;
+    }
+    .drop-container .drop-list{
+      background: black; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, black , rgba(0,0,0,0.4)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, black, rgba(0,0,0,0.4)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, black, rgba(0,0,0,0.4)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, black , rgba(0,0,0,0.4)); /* Standard syntax */
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    footer nav > ul{
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+    }
+    footer nav {
+      margin-top:20px;
+    }
+    footer nav > ul > li{
+      line-height: 20px;
+      display: inline-block;
+      margin-left: 10px;
+     }
+
+    footer nav > ul > li > a {
+       text-decoration: none;
+        color: white;
+     }
+     footer nav > ul > li > a:hover{
+      text-decoration: none;
+      color:#CC0000;
+     }
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
